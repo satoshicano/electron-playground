@@ -1,6 +1,6 @@
 {
   "name": "electron-playground",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "app/main.js",
   "private": true,
   "license": "MIT",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "dist": "build",
-    "release": "build --mac --publish always",
+    "release": "build --mac --win --publish always",
     "clean": "rimraf dist/*"
   },
   "devDependencies": {
@@ -28,6 +28,9 @@
     "productName": "electron-playground",
     "mac": {
       "category": "your.app.category.type"
+    },
+    "win": {
+      "target": "nsis"
     }
   }
 }
