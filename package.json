@@ -1,27 +1,35 @@
 {
   "name": "electron-playground",
   "version": "0.1.4",
-  "main": "app/main.js",
   "private": true,
   "license": "MIT",
+  "main": "app/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron .",
-    "dist": "build",
-    "release": "build --mac --win --publish always",
-    "clean": "rimraf dist/*"
-  },
-  "devDependencies": {
-    "cpx": "^1.5.0",
-    "cross-env": "^4.0.0",
-    "electron": "^1.7.3",
-    "electron-builder": "^18.5.1",
-    "npm-run-all": "^4.0.2",
-    "rimraf": "^2.6.1"
+    "clean": "rimraf dist/*",
+    "compile": "electron-webpack",
+    "dev": "electron-webpack dev",
+    "pack": "yarn compile && electron-builder --dir",
+    "dist": "yarn compile && electron-builder",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
+    "release": "yarn compile && electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "electron-log": "^2.2.9",
-    "electron-updater": "^2.8.9"
+    "electron-updater": "^2.8.9",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "source-map-support": "^0.5.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-preset-react": "^6.24.1",
+    "electron": "^1.7.10",
+    "electron-builder": "^19.52.1",
+    "electron-webpack": "^1.11.0",
+    "electron-webpack-eslint": "^1.2.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
   },
   "build": {
     "appId": "com.github.satoshicano.electron-playground",
