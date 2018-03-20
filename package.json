@@ -1,6 +1,6 @@
 {
   "name": "electron-playground",
-  "version": "0.2.0",
+  "version": "1.0.0-beta.1",
   "private": true,
   "license": "MIT",
   "main": "app/main.js",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "electron-log": "^2.2.9",
-    "electron-updater": "^2.8.9",
+    "electron-updater": "^2.18.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "source-map-support": "^0.5.0"
@@ -38,6 +38,9 @@
     "tslint-react": "^3.4.0",
     "typescript": "^2.6.2",
     "webpack": "^3.10.0"
+  },
+  "resolutions": {
+    "webpack-sources": "1.0.1"
   },
   "build": {
     "appId": "com.github.satoshicano.electron-playground",

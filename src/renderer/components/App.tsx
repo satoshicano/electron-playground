@@ -19,8 +19,9 @@ export class App extends React.Component<{}, IState> {
   render() {
     return (
       <div>
-        Current version: <span>v{window.location.hash.substring(1)}</span>
+        Current version: <span>{window.location.hash.substring(1)}</span>
         {this.state.messages}
+        <p>beta</p>
       </div>
     );
   }
