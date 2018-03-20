@@ -21,7 +21,7 @@ export class App extends React.Component<{}, IState> {
       <div>
         Current version: <span>{window.location.hash.substring(1)}</span>
         {this.state.messages}
-        <p>beta</p>
+        <p>this is beta</p>
       </div>
     );
   }
