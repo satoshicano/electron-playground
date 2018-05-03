@@ -109,7 +109,7 @@ app.on("ready", () => {
 });
 
 app.on("ready", () => {
-  if (isDevelopment) {
+  if (!isDevelopment) {
     autoUpdater.checkForUpdatesAndNotify();
   }
 });
