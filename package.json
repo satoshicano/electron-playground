@@ -1,17 +1,21 @@
 {
   "name": "electron-playground",
-  "version": "1.0.0-beta.3",
+  "description": "simple electron app for playground",
+  "version": "1.0.0-beta.4",
   "private": true,
   "license": "MIT",
+  "author": {
+    "name": "satoshicano",
+    "email": "satoshicano@gmail.com"
+  },
   "main": "app/main.js",
   "scripts": {
     "clean": "rimraf dist/*",
     "compile": "electron-webpack",
     "dev": "electron-webpack dev",
-    "pack": "yarn compile && electron-builder --dir",
     "dist": "yarn compile && electron-builder",
     "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
-    "release": "yarn compile && electron-builder",
+    "release": "yarn compile && build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
