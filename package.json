@@ -36,7 +36,7 @@
     "@types/react": "^16.0.34",
     "@types/react-dom": "^16.0.3",
     "babel-preset-react": "^6.24.1",
-    "electron": "^1.7.10",
+    "electron": "^9.4.0",
     "electron-builder": "^20.8.2",
     "electron-load-devtool": "^1.0.0",
     "electron-webpack": "^1.11.0",
